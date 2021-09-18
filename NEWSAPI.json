@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import NewsItem from './NewsItem';
-
-export class News extends Component {
-  articles = [
+{
+  "status": "ok",
+  "totalResults": 38,
+  "articles": [
     {
       "source": {
         "id": "cnn",
@@ -147,27 +146,4 @@ export class News extends Component {
       "content": "The Week 3 college football slate didn’t appear all that promising at the start of the season. But it has shaped up to be quite intriguing indeed, with three top-25 matchups and several other non-con… [+8934 chars]"
     }
   ]
-  constructor() {
-    super();
-    this.state = {
-      articles: this.articles,
-      loading: false
-    }
-  }
-  render() {
-    return (
-      <div className='container mt-3'>
-        <h1 className='mb-3'>NewsWorld - Top Headlines</h1>
-        <div className="row row-cols-1 row-cols-md-3 g-4">
-          {
-            this.state.articles.map((element) => {
-              return <NewsItem key={element.url} title={element.title.slice(0, 30)} description={element.description.slice(0, 88)} imageUrl={element.urlToImage} readmore={element.url} />
-            })
-          }
-        </div>
-      </div>
-    )
-  }
 }
-
-export default News;

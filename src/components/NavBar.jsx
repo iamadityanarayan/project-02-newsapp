@@ -22,7 +22,7 @@ export default class NavBar extends Component {
                   <a className="nav-link text-light text-uppercase" href="#">Contact</a>
                 </li>
               </ul> */}
-              <a class="btn btn-sm btn-outline-info ms-auto" href="#" role="button">Sign Up / Sign In</a>
+              <a className="btn btn-sm btn-outline-info ms-auto" href="#" role="button">Sign Up / Sign In</a>
             </div>
           </div>
         </nav>
