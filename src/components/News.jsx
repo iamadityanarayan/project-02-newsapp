@@ -2,166 +2,34 @@ import React, { Component } from 'react';
 import NewsItem from './NewsItem';
 
 export class News extends Component {
-  articles = [
-    {
-      "source": {
-        "id": "cnn",
-        "name": "CNN"
-      },
-      "author": "Priscilla Alvarez, CNN",
-      "title": "DHS to ramp up deportation flights to Haiti as migrants overwhelm US southern border - CNN",
-      "description": "The Department of Homeland Security plans to ramp up deportation flights to Haiti to deter Haitians who are overwhelming Del Rio, Texas, a Customs and Border Protection official told CNN.",
-      "url": "https://www.cnn.com/2021/09/18/politics/biden-haiti-deportations/index.html",
-      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/210918084722-joe-biden-09-16-2021-super-tease.jpg",
-      "publishedAt": "2021-09-18T13:36:00Z",
-      "content": "Washington (CNN)The Department of Homeland Security plans to ramp up deportation flights to Haiti to deter Haitians who are overwhelming Del Rio, Texas, a Customs and Border Protection official told … [+1986 chars]"
-    },
-    {
-      "source": {
-        "id": "fox-news",
-        "name": "Fox News"
-      },
-      "author": "Tyler Olson",
-      "title": "Biden agenda in limbo amid 'intense' reconciliation talks, Dems allegedly holding infrastructure 'hostage' - Fox News",
-      "description": "President Biden's two major economic agenda items hang in the balance this week as Democrats continue \"intense discussions\" on their $3.5 trillion spending plan and some Republicans are warning that their support for the $1 trillion bipartisan infrastructure …",
-      "url": "https://www.foxnews.com/politics/infrastructure-reconciliation-pelosi-democrats-republicans-hostage",
-      "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2021/07/Joe-Biden-Facebook-Killing-People-Comment-AP.jpg",
-      "publishedAt": "2021-09-18T13:34:58Z",
-      "content": "President Biden's two major economic agenda items hang in the balance this week as Democrats continue \"intense discussions\" on their $3.5 trillion spending plan and some Republicans are warning that … [+7295 chars]"
-    },
-    {
-      "source": {
-        "id": null,
-        "name": "Haaretz"
-      },
-      "author": "Haaretz",
-      "title": "How Israel assassinated top Iranian nuclear scientist with 'killer robot' - Haaretz",
-      "description": "***",
-      "url": "https://www.haaretz.com/israel-news/how-israel-assassinated-top-iranian-nuclear-scientist-with-killer-robot-1.10217456",
-      "urlToImage": "https://www.haaretz.com/polopoly_fs/1.10217463.1631971545!/image/2776211692.jpg_gen/derivatives/headline_1200x630/2776211692.jpg",
-      "publishedAt": "2021-09-18T13:14:00Z",
-      "content": "Israel used a high-tech remote-controlled machine gun for the first time last year to kill a prominent Iranian nuclear scientist, The New York Times reported Saturday, apparently confirming earlier I… [+1770 chars]"
-    },
-    {
-      "source": {
-        "id": "the-verge",
-        "name": "The Verge"
-      },
-      "author": "Monica Chin",
-      "title": "Why you need a personal laptop - The Verge",
-      "description": "Using a work laptop as your personal laptop can seem like a convenient cost-saving measure, especially if you work from home. But experts say that buying a personal laptop is worth the extra cost.",
-      "url": "https://www.theverge.com/22671697/personal-laptop-work-security-privacy",
-      "urlToImage": "https://cdn.vox-cdn.com/thumbor/9ntbPnPbqv-qEFflncXlFVIZTGk=/0x481:6720x3999/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/22804719/akrales_210824_4723_0158.jpg",
-      "publishedAt": "2021-09-18T13:00:00Z",
-      "content": "Keeping work and life on one device puts your privacy at risk\r\nYep, if my employer gave me a ThinkPad X1 Carbon, Id want to use it all the time too. Dont do it!\r\nPhoto by Amelia Holowaty Krales / The… [+7767 chars]"
-    },
-    {
-      "source": {
-        "id": "associated-press",
-        "name": "Associated Press"
-      },
-      "author": "Kathy Gannon",
-      "title": "Taliban replace ministry for women with one restricting them - Associated Press",
-      "description": "KABUL, Afghanistan (AP) — Afghanistan's new Taliban rulers set up a ministry for the “propagation of virtue and the prevention of vice\" in the building that once housed the Women's Affairs Ministry, escorting out World Bank staffers Saturday as part of the fo…",
-      "url": "https://apnews.com/article/middle-east-afghanistan-womens-rights-kabul-taliban-eee5a8c73dd5d58acfda008582ef77bb",
-      "urlToImage": "https://storage.googleapis.com/afs-prod/media/b46ca0f3b199492d80cffa718a94f1aa/3000.jpeg",
-      "publishedAt": "2021-09-18T12:31:36Z",
-      "content": "KABUL, Afghanistan (AP) Afghanistans new Taliban rulers set up a ministry for the propagation of virtue and the prevention of vice in the building that once housed the Womens Affairs Ministry, escort… [+3917 chars]"
-    },
-    {
-      "source": {
-        "id": "nbc-news",
-        "name": "NBC News"
-      },
-      "author": "Jonathan Allen",
-      "title": "Capitol Police chief: 'We are not going to tolerate violence' - NBC News",
-      "description": "Top cops say the Capitol and the Metropolitan Police departments are prepared to prevent a repeat of the Jan. 6 Capitol riot Saturday.",
-      "url": "https://www.nbcnews.com/politics/politics-news/capitol-police-chief-we-are-not-going-tolerate-violence-n1279465",
-      "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2021_37/3506690/1340991608.jpg",
-      "publishedAt": "2021-09-18T11:47:50Z",
-      "content": "WASHINGTON Washington and state capitols across the country braced Saturday morning for \"Justice for J6\" protests aimed at calling attention to what organizers say is the unfair treatment of people c… [+4154 chars]"
-    },
-    {
-      "source": {
-        "id": "cnn",
-        "name": "CNN"
-      },
-      "author": "Faith Karimi, CNN",
-      "title": "The Murdaugh family saga: a tangled web of secrets and murder - CNN",
-      "description": "A deadly boating accident. Two unsolved murders. A botched hit job. The twists and turns keep coming in the saga of the Murdaughs, a powerful South Carolina family linked to a string of mysterious deaths.",
-      "url": "https://www.cnn.com/2021/09/18/us/murdaugh-mystery-south-carolina/index.html",
-      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/210916142404-02b-murdaugh-family-super-tease.jpg",
-      "publishedAt": "2021-09-18T11:01:00Z",
-      "content": "(CNN)A powerful family. A deadly boating accident. Two mysterious slayings. Drug addiction, stolen money and a botched shooting in an alleged insurance fraud scheme.\r\nIt sounds like someone took a li… [+10953 chars]"
-    },
-    {
-      "source": {
-        "id": "cnn",
-        "name": "CNN"
-      },
-      "author": "Scottie Andrew, CNN",
-      "title": "How televangelist Tammy Faye Messner became a gay icon - CNN",
-      "description": "Tammy Faye Messner (formerly Bakker) was camp incarnate. While she's remembered for her wildly over-the-top makeup and garish animal-print ensembles, what also endures is the seemingly sincere love she had for her gay fans.",
-      "url": "https://www.cnn.com/2021/09/18/entertainment/tammy-faye-bakker-lgbtq-ally-cec/index.html",
-      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/210917134729-01-tammy-faye-bakker-rupaul-2000-super-tease.jpg",
-      "publishedAt": "2021-09-18T10:42:00Z",
-      "content": "(CNN)Tammy Faye Messner (formerly Bakker) was camp incarnate. With her wildly over-the-top makeup and garish animal-print ensembles, a penchant for singing Christian disco anthems despite her lack of… [+8085 chars]"
-    },
-    {
-      "source": {
-        "id": null,
-        "name": "New York Times"
-      },
-      "author": "Amir Jalal Zerdoumi, Carlotta Gall",
-      "title": "Abdelaziz Bouteflika, Algeria’s Longest-Serving President, Dies at 84 - The New York Times",
-      "description": "Mr. Bouteflika, ousted from the presidency in 2019 after 20 years in office, joined the country’s fight for independence in the 1950s and helped lead the nation out of a brutal civil war in the 1990s.",
-      "url": "https://www.nytimes.com/2021/09/17/world/middleeast/bouteflika-algeria-president-dies.html",
-      "urlToImage": "https://static01.nyt.com/images/2021/09/19/world/19bouteflika-obit1/xxbouteflika1-facebookJumbo.jpg",
-      "publishedAt": "2021-09-18T10:19:00Z",
-      "content": "After Algeria won independence in 1962, Mr. Bouteflika was appointed minister of youth and sports in the government of Ahmed Ben Bella, Algerias first elected president. He headed Algerian delegation… [+1930 chars]"
-    },
-    {
-      "source": {
-        "id": "reuters",
-        "name": "Reuters"
-      },
-      "author": null,
-      "title": "SpaceX capsule with world's first all-civilian orbital crew set for splashdown - Reuters",
-      "description": "The quartet of newly minted citizen astronauts comprising the SpaceX Inspiration4 mission were due to splash down in the Atlantic off Florida on Saturday, completing a three-day flight of the first all-civilian crew ever launched into Earth orbit.",
-      "url": "https://www.reuters.com/lifestyle/science/spacex-capsule-with-worlds-first-all-civilian-orbital-crew-set-splashdown-2021-09-18/",
-      "urlToImage": "https://www.reuters.com/resizer/PMNDabScSnSvPgpJWX69kkSpb-0=/801x419/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/XON5DPKO6VNWRCFFU2OE4BCFBA.jpg",
-      "publishedAt": "2021-09-18T10:10:00Z",
-      "content": "Sept 18 (Reuters) - The quartet of newly minted citizen astronauts comprising the SpaceX Inspiration4 mission were due to splash down in the Atlantic off Florida on Saturday, completing a three-day f… [+3234 chars]"
-    },
-    {
-      "source": {
-        "id": "usa-today",
-        "name": "USA Today"
-      },
-      "author": "Eddie Timanus, USA TODAY",
-      "title": "College football games to watch in Week 3: Alabama-Florida SEC showdown tops seven must-see matchups - USA TODAY",
-      "description": "Some independents hope to protect their home turf, plus the renewal of a long-standing regional rivalry that once had conference title implications.",
-      "url": "https://www.usatoday.com/story/sports/ncaaf/2021/09/18/college-football-week-3-games-to-watch/8369764002/",
-      "urlToImage": "https://www.gannett-cdn.com/media/2021/06/11/USATODAY/usatsports/0e2aea701b244afdbcf99993a8631dc2.jpg?auto=webp&crop=4667,2625,x0,y244&format=pjpg&width=1200",
-      "publishedAt": "2021-09-18T10:03:56Z",
-      "content": "The Week 3 college football slate didn’t appear all that promising at the start of the season. But it has shaped up to be quite intriguing indeed, with three top-25 matchups and several other non-con… [+8934 chars]"
-    }
-  ]
+
+  async componentDidMount(){
+    let url = 'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=e86cf0ce88114c588fe0cca9a23ee0c0';
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    this.setState({articles : parsedData.articles})
+  }
+
   constructor() {
     super();
     this.state = {
-      articles: this.articles,
+      articles: [],
       loading: false
     }
   }
   render() {
+    let defaultImageUrl='https://images.wsj.net/im-403222/social';
     return (
       <div className='container mt-3'>
-        <h1 className='mb-3'>NewsWorld - Top Headlines</h1>
+        <h1 className='mb-5'>NewsWorld - Top Headlines</h1>
         <div className="row row-cols-1 row-cols-md-3 g-4">
-          {
-            this.state.articles.map((element) => {
-              return <NewsItem key={element.url} title={element.title.slice(0, 30)} description={element.description.slice(0, 88)} imageUrl={element.urlToImage} readmore={element.url} />
+          { 
+            this.state.articles.map((element) => { 
+              return <NewsItem key={element.url} 
+              title={element.title ?  element.title.slice(0, 30) : 'NA'} 
+              description={element.description ?  element.description.slice(0, 88) : 'NA'} 
+              imageUrl={element.urlToImage ? element.urlToImage : defaultImageUrl} 
+              readmore={element.url} />
             })
           }
         </div>
