@@ -12,7 +12,7 @@ export class NewsItem extends Component {
             <p className="card-text fs-6">{description}</p>
           </div>
           <div className="card-footer border-0 bg-transparent d-flex justify-content-center">
-            <a href={readmore} target='_blank' className="btn btn-dark px-3 text-center">Read More</a>
+            <a href={readmore} target='_blank' rel="noreferrer" className="btn btn-dark px-3 text-center">Read More</a>
           </div>
         </div>
       </div>
