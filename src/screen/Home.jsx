@@ -15,14 +15,14 @@ export default class Home extends Component {
         <Router>
           <NavBar />
           <Switch>
-            <Route path="/"><News country='in' category='general' apiKey={API_2} pageSize={5} /></Route>
-            <Route path="/business"><News country='in' category='business' apiKey={API_2} pageSize={5} /></Route>
-            <Route path="/entertainment"><News country='in' category='entertainment' apiKey={API_2} pageSize={5} /></Route>
-            <Route path="/general"><News country='in' category='general' apiKey={API_2} pageSize={5} /></Route>
-            <Route path="/health"><News country='in' category='health' apiKey={API_2} pageSize={5} /></Route>
-            <Route path="/science"><News country='in' category='science' apiKey={API_2} pageSize={5} /></Route>
-            <Route path="/sports"><News country='in' category='sports' apiKey={API_2} pageSize={5} /></Route>
-            <Route path="/technology"><News country='in' category='technology' apiKey={API_2} pageSize={5} /></Route>
+            <Route exact path="/"><News key='general' country='in' category='general' apiKey={API_2} pageSize={5} /></Route>
+            <Route exact path="/business"><News key='business' country='in' category='business' apiKey={API_2} pageSize={5} /></Route>
+            <Route exact path="/entertainment"><News key='entertainment' country='in' category='entertainment' apiKey={API_2} pageSize={5} /></Route>
+            <Route exact path="/general"><News key='general' country='in' category='general' apiKey={API_2} pageSize={5} /></Route>
+            <Route exact path="/health"><News key='health' country='in' category='health' apiKey={API_2} pageSize={5} /></Route>
+            <Route exact path="/science"><News key='science' country='in' category='science' apiKey={API_2} pageSize={5} /></Route>
+            <Route exact path="/sports"><News key='sports' country='in' category='sports' apiKey={API_2} pageSize={5} /></Route>
+            <Route exact path="/technology"><News key='technology' country='in' category='technology' apiKey={API_2} pageSize={5} /></Route>
           </Switch>
         </Router>
       </div>
