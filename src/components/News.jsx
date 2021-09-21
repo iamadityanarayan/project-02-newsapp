@@ -17,13 +17,14 @@ export class News extends Component {
     category: PropTypes.string,
   }
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       articles: [],
       loading: false,
       page: 1
     }
+    document.title = `${this.props.category.charAt(0).toUpperCase() + this.props.category.slice(1)} - NewsWorld`
   }
 
   async updateNews() {
@@ -61,7 +62,7 @@ export class News extends Component {
     let defaultImageUrl = 'https://images.wsj.net/im-403222/social';
     return (
       <div className='container my-3'>
-        <h1 className='text-center'>NewsWorld - Top Headlines</h1>
+        <h1 className='text-center'>NewsWorld - Top {this.props.category.charAt(0).toUpperCase() + this.props.category.slice(1)} Headlines </h1>
         <div className="d-grid gap-2 d-md-flex justify-content-between my-4 border-2 border-top border-bottom py-2">
           <button disabled={this.state.page <= 1} onClick={this.handlePreviousPage} className="btn btn-dark me-md-2" type="button"> &larr; Previous</button>
           <div className="align-items-center d-flex">Page - {this.state.page}</div>
