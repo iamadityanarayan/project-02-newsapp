@@ -88,7 +88,7 @@ export class News extends Component {
             let _description = element.description ? element.description.length >= 88 ? element.description.slice(0, 88) + '...' : element.description.slice(0, 88) : 'NA';
             let _imageUrl = element.urlToImage ? element.urlToImage : defaultImageUrl
 
-            return <NewsItem key={element.url} title={_title} description={_description} imageUrl={_imageUrl} readmore={element.url} />
+            return <NewsItem key={element.url} title={_title} description={_description} imageUrl={_imageUrl} readmore={element.url} author={element.author} date={element.publishedAt} />
           })
           }
         </div>
