@@ -1,6 +1,22 @@
-# Getting Started with Create React App
+
+NEWSWORLD WEB-APP
+
+`React Js | Class Based Component | Hooks `
+Run the app:
+
+Clone the app:
+$ git clone https://github.com/bertamatu/currency-app.git
+## To install all dependenciesrun:
+`npm install`
+
+## To start the app :
+### `npm start`
+
+`Class Based Components from 1 - 15 commits`
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
