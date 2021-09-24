@@ -1,19 +1,25 @@
 
-NEWSWORLD WEB-APP
+# NEWSWORLD WEB
 
-`React Js | Class Based Component | Hooks `
-Run the app:
+`React Js | Class Based Component | Function Based Component | Hooks`
 
-Clone the app:
-$ git clone https://github.com/bertamatu/currency-app.git
-## To install all dependenciesrun:
-`npm install`
+<hr>
 
-## To start the app :
-### `npm start`
+# Run the app:
+### Step 1: Clone the app: 
+`$ git clone https://github.com/iamadityanarayan/project-02-newsapp.git`
+
+### Step 2: To install all dependencies:
+ `npm install`
+
+ ### Step 3: To start the app :
+ `npm start`
+
+<hr>
 
 `Class Based Components from 1 - 15 commits`
 
+<hr>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -22,7 +28,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+###  `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
