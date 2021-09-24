@@ -13,13 +13,13 @@ export default class NavBar extends Component {
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li className="nav-item"><Link className="nav-link text-light text-uppercase" to="/business">business</Link></li>
-                <li className="nav-item"><Link className="nav-link text-light text-uppercase" to="/entertainment">entertainment</Link></li>
-                <li className="nav-item"><Link className="nav-link text-light text-uppercase" to="/general">general</Link></li>
-                <li className="nav-item"><Link className="nav-link text-light text-uppercase" to="/health">health</Link></li>
-                <li className="nav-item"><Link className="nav-link text-light text-uppercase" to="/science">science</Link></li>
-                <li className="nav-item"><Link className="nav-link text-light text-uppercase" to="/sports">sports</Link></li>
-                <li className="nav-item"><Link className="nav-link text-light text-uppercase" to="/technology">technology</Link></li>
+                <li className="nav-item"><Link className="nav-link text-uppercase" to="/business">business</Link></li>
+                <li className="nav-item"><Link className="nav-link text-uppercase" to="/entertainment">entertainment</Link></li>
+                <li className="nav-item"><Link className="nav-link text-uppercase" to="/general">general</Link></li>
+                <li className="nav-item"><Link className="nav-link text-uppercase" to="/health">health</Link></li>
+                <li className="nav-item"><Link className="nav-link text-uppercase" to="/science">science</Link></li>
+                <li className="nav-item"><Link className="nav-link text-uppercase" to="/sports">sports</Link></li>
+                <li className="nav-item"><Link className="nav-link text-uppercase" to="/technology">technology</Link></li>
               </ul>
               <a className="btn btn-sm btn-outline-info" to="#" role="button">Sign Up / Sign In</a>
             </div>
